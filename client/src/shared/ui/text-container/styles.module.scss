@@ -1,0 +1,32 @@
+.text {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 600;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 56px;
+  img {
+    position: absolute;
+    left: 0;
+    top: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 500px) {
+  .text {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .container {
+    margin-bottom: 49px;
+    img {
+      top: calc(50% - 9px);
+      height: 18px;
+      width: 16px;
+    }
+  }
+}

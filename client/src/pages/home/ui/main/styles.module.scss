@@ -1,0 +1,30 @@
+.main {
+  width: 82vw;
+}
+.filter {
+  margin-bottom: 30px;
+  display: flex;
+  max-width: 416px;
+  width: 30%;
+  justify-content: space-between;
+}
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  position: relative;
+  outline: none;
+  padding: 5px;
+  padding-right: 40px;
+  background-color: transparent;
+  color: #fff;
+}
+select:after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
