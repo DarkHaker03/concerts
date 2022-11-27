@@ -8,7 +8,7 @@ type Props = {
 };
 
 const Category = ({ isFavorableOffer }: Props) => (
-  <div>
+  <div style={{ maxWidth: '100%' }}>
     <div className={styles.name}>
       <span>Самые ожидаемые</span>
       <icons.ArrowRight />

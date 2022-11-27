@@ -41,3 +41,12 @@ input {
   min-width: 100vw;
   min-height: 100vh;
 }
+body::-webkit-scrollbar {
+  width: 3px; /* ширина scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: rgb(58, 55, 55); /* цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: black; /* цвет плашки */
+}
