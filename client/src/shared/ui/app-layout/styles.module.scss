@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 42px 0 62px 0;
+}
+.wrapper {
+  padding: 20px;
+}
+.typesConcertsContainer {
+  display: flex;
+  color: #6d6d6d;
+  font-size: 18px;
+  div {
+    margin-right: 65px;
+  }
+  div:last-child {
+    margin-right: 0;
+  }
+}
+.main {
+  width: 82vw;
+}
+
+.inputContainer {
+  height: 54px;
+  max-width: 358px;
+  width: 90%;
+  position: relative;
+  input {
+    width: 100%;
+    font-size: 16px;
+    padding-left: 20px;
+    height: 100%;
+    color: #fff;
+    padding-right: 50px;
+  }
+}
+.whereUser {
+  font-size: 24px;
+  font-weight: 600;
+}

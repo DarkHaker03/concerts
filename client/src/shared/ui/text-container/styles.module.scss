@@ -9,11 +9,11 @@
   justify-content: center;
   position: relative;
   margin-bottom: 56px;
-  img {
-    position: absolute;
-    left: 0;
-    top: calc(50% - 10px);
-  }
+}
+.icon {
+  position: absolute;
+  left: 0;
+  top: calc(50% - 10px);
 }
 
 @media (max-width: 500px) {
@@ -23,10 +23,10 @@
   }
   .container {
     margin-bottom: 49px;
-    img {
-      top: calc(50% - 9px);
-      height: 18px;
-      width: 16px;
-    }
+  }
+  .icon {
+    top: calc(50% - 9px);
+    height: 18px;
+    width: 16px;
   }
 }

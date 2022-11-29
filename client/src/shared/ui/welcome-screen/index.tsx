@@ -1,12 +1,19 @@
 import img from 'shared/assets/img/consert-img.jpg';
-import logo from 'shared/assets/img/logo.svg';
+import { icons } from '../icons';
 import styles from './styles.module.scss';
 
 const WelcomeScreen = () => (
   <div className={styles.container}>
-    <img src={logo} alt="EVENTO" style={{ height: '20px', width: '142px' }} />
+    <div style={{ zIndex: 1 }}>
+      <icons.Logo
+        inlineStyles={{
+          height: '20px',
+          width: '140px',
+        }}
+      />
+    </div>
     <img src={img} alt="" className={styles.img} />
-    <div className={styles.infoContainer}>
+    <div style={{ zIndex: 1 }}>
       <div className={styles.text}>
         Билет на концерт твоей мечты в пару кликов
       </div>

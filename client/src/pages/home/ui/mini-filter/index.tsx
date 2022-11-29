@@ -1,22 +1,18 @@
 import filter from 'shared/assets/img/filter.svg';
-import arrowBottom from 'shared/assets/img/arrow-bottom.svg';
-import { Category } from 'pages/home/ui/main/category';
+import { icons } from 'shared/ui/icons';
+import { Category } from '../category';
 import styles from './styles.module.scss';
-
-type Props = {
-  open: () => void;
-};
 
 const isPC = false;
 
-const MiniFilter = ({ open }: Props) => (
+const MiniFilter = () => (
   <div style={isPC ? { maxWidth: '416px' } : {}} className={styles.filter}>
     {isPC ? (
       <>
         <img
           src={filter}
           alt=""
-          onClick={open}
+          onClick={() => 1}
           role="none"
           style={{ cursor: 'pointer' }}
         />
@@ -26,15 +22,15 @@ const MiniFilter = ({ open }: Props) => (
             <option value="2">2</option>
             <option value="3">3</option>
           </select>
-          <img
-            src={arrowBottom}
-            alt=""
+          <div
             style={{
               position: 'absolute',
               right: '5px',
               top: 'calc(50% - 3px)',
             }}
-          />
+          >
+            <icons.ArrowBottom />
+          </div>
         </div>
         <div style={{ position: 'relative' }}>
           <select name="" id="">
@@ -42,15 +38,15 @@ const MiniFilter = ({ open }: Props) => (
             <option value="2">2</option>
             <option value="3">3</option>
           </select>
-          <img
-            src={arrowBottom}
-            alt=""
+          <div
             style={{
               position: 'absolute',
               right: '5px',
               top: 'calc(50% - 3px)',
             }}
-          />
+          >
+            <icons.ArrowBottom />
+          </div>
         </div>
         <div style={{ position: 'relative' }}>
           <select name="" id="">
@@ -58,15 +54,15 @@ const MiniFilter = ({ open }: Props) => (
             <option value="2">2</option>
             <option value="3">3</option>
           </select>
-          <img
-            src={arrowBottom}
-            alt=""
+          <div
             style={{
               position: 'absolute',
               right: '5px',
               top: 'calc(50% - 3px)',
             }}
-          />
+          >
+            <icons.ArrowBottom />
+          </div>
         </div>
       </>
     ) : (

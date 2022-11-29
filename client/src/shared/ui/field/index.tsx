@@ -4,7 +4,7 @@ type Props = {
   text?: string;
   value: string;
   onChange: React.Dispatch<React.SetStateAction<string>>;
-  icon?: string;
+  icon?: JSX.Element;
 };
 
 const Field = ({ text, value, onChange, icon }: Props) => (
@@ -16,7 +16,7 @@ const Field = ({ text, value, onChange, icon }: Props) => (
         value={value}
         onChange={(e) => onChange(e.target.value)}
       />
-      <img src={icon} alt="" />
+      {icon && <span className={styles.icon}>{icon}</span>}
     </div>
   </div>
 );

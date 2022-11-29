@@ -1,5 +1,6 @@
 .container {
   margin-right: 20px;
+  position: relative;
 }
 .img {
   border-radius: 10px;
@@ -50,7 +51,7 @@
   margin-bottom: 30px;
   font-size: 20px;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   font-weight: 600;
   line-height: 20px;
   span {

@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router';
-import logo from 'shared/assets/img/logo.svg';
+import { icons } from 'shared/ui/icons';
 import styles from './styles.module.scss';
 
 const Welcome = () => {
@@ -7,7 +7,7 @@ const Welcome = () => {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
-        <img src={logo} alt="" style={{ marginTop: '242px', width: '100%' }} />
+        <icons.Logo inlineStyles={{ marginTop: '242px', width: '100%' }} />
         <div className={styles.text}>
           Билет на концерт твоей мечты в пару кликов
         </div>
