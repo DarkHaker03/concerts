@@ -3,6 +3,7 @@
   max-width: 100%;
   overflow-x: scroll;
 }
+
 .carousel::-webkit-scrollbar {
   height: 3px; /* ширина scrollbar */
 }
@@ -23,6 +24,12 @@
     margin-right: 10px;
   }
 }
+@media (max-width: 750px) {
+  .mobileVertical {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 340px) {
   .name {
     font-size: 16px;

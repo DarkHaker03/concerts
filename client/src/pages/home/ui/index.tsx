@@ -1,17 +1,14 @@
-import { Category } from './category';
-import styles from './styles.module.scss';
+import { Category } from 'entities/category';
 
-const Main = () => (
-  <main className={styles.main}>
-    <div className={styles.container}>
-      <div style={{ marginBottom: '60px' }}>
-        <Category text="События" />
-      </div>
-      <div style={{ marginBottom: '60px' }}>
-        <Category isFavorableOffer text="Специальные предложения" />
-      </div>
+const Home = () => (
+  <>
+    <div style={{ marginBottom: '60px' }}>
+      <Category text="События" />
     </div>
-  </main>
+    <div style={{ marginBottom: '60px' }}>
+      <Category isFavorableOffer text="Специальные предложения" />
+    </div>
+  </>
 );
 
-export { Main };
+export { Home };

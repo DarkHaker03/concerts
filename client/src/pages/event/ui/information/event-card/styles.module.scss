@@ -1,0 +1,46 @@
+.container {
+  margin-left: 45px;
+  max-width: 391px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.type {
+  color: #6d6d6d;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.name {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 28px;
+}
+.calendar {
+  color: #2eba72;
+  font-size: 16px;
+  margin-left: 15px;
+}
+.place {
+  color: #2eba72;
+  font-size: 16px;
+  margin-left: 15px;
+}
+.button {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  background-color: #67d89e;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.p {
+  color: #dadada;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}

@@ -1,6 +1,6 @@
 import filter from 'shared/assets/img/filter.svg';
 import { icons } from 'shared/ui/icons';
-import { Category } from '../category';
+import { Category } from 'entities/category';
 import styles from './styles.module.scss';
 
 const isPC = false;

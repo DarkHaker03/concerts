@@ -1,0 +1,42 @@
+.sliderContainer {
+  max-width: 687px;
+  position: relative;
+}
+.slider {
+  overflow: hidden;
+}
+.container {
+  display: flex;
+}
+.slide {
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+.arrows {
+  position: absolute;
+  right: 27px;
+  bottom: 24px;
+  .arrow:first-child {
+    transform: rotate(180deg);
+    margin-right: 8px;
+  }
+}
+.arrow {
+  background-color: #131313;
+  padding: 10px;
+  display: inline-flex;
+  border-radius: 5px;
+}
+
+@media (max-width: 1200px) {
+  .arrows {
+    top: 24px;
+  }
+}
+@media (max-width: 750px) {
+  .arrows {
+    top: 24px;
+  }
+}

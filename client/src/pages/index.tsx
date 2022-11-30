@@ -3,9 +3,10 @@ import { LayoutForRegistrationAndregistration } from 'shared/ui/layout-for-autor
 import { AppLayout } from 'shared/ui/app-layout';
 import { Autorization } from './autorization/ui';
 import { Welcome } from './welcome/ui';
-import { Main } from './home/ui';
+import { Home } from './home/ui';
 import { Registration } from './registration/ui';
 import { Event } from './event/ui';
+import { Favourites } from './favourites';
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
     path: '/home',
     element: (
       <AppLayout>
-        <Main />
+        <Home />
       </AppLayout>
     ),
   },
@@ -41,6 +42,14 @@ const router = createBrowserRouter([
     element: (
       <AppLayout>
         <Event />
+      </AppLayout>
+    ),
+  },
+  {
+    path: '/favourites',
+    element: (
+      <AppLayout configuration={{ onlyPageName: true }}>
+        <Favourites />
       </AppLayout>
     ),
   },

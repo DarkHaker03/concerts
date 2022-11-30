@@ -1,28 +1,24 @@
-import { useState } from 'react';
-import { Filter } from 'pages/home/ui/filter';
 import { Sidebar } from 'widgets/sidebar/ui';
 import { Header } from 'widgets/header/ui';
 import styles from './styles.module.scss';
 
+type Configuration = {
+  onlyPageName?: boolean;
+};
+
 type Props = {
   children: JSX.Element;
+  configuration?: Configuration;
 };
 
-const AppLayout = ({ children }: Props) => {
-  const [filterIsOpen, setFilterIsOpen] = useState(false);
-  const close = () => setFilterIsOpen(false);
-  const open = () => setFilterIsOpen(true);
-
-  return (
-    <div className={styles.wrapper}>
-      <Header />
-      <div style={{ display: 'flex' }}>
-        <Sidebar />
-        {children}
-      </div>
-      {filterIsOpen && <Filter />}
+const AppLayout = ({ children, configuration }: Props) => (
+  <div className={styles.wrapper}>
+    <Header />
+    <div style={{ display: 'flex' }}>
+      <Sidebar />
+      <main className={styles.main}>{children}</main>
     </div>
-  );
-};
+  </div>
+);
 
 export { AppLayout };

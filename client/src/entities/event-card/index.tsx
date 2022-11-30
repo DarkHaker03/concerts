@@ -1,14 +1,25 @@
 import { useState } from 'react';
+import clsx from 'clsx';
 import { icons } from 'shared/ui/icons';
-import img from 'shared/assets/img/img.jpg';
+import img from 'shared/assets/img/img--2.jpg';
 import styles from './styles.module.scss';
 
-const EventCard = () => {
+type Props = {
+  mobileVertical?: boolean;
+  infoOnImg?: boolean;
+};
+
+const EventCard = ({ mobileVertical, infoOnImg }: Props) => {
   const [isSelect, setIsSelected] = useState(false);
   return (
-    <div className={styles.container}>
+    <div
+      className={clsx(
+        styles.container,
+        mobileVertical && styles.mobileVertical
+      )}
+    >
       <img className={styles.img} src={img} alt="" />
-      <div className={styles.information}>
+      <div className={clsx(styles.information, infoOnImg && styles.infoOnImg)}>
         <div className={styles.date}>
           15 <br /> <span> окт</span>
         </div>
