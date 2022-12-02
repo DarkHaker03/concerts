@@ -3,10 +3,18 @@ import { Category } from 'entities/category';
 const Home = () => (
   <>
     <div style={{ marginBottom: '60px' }}>
-      <Category text="События" />
+      <Category
+        name="События"
+        card={{
+          name: 'event',
+          configuration: {
+            infoOnImg: { mobile: true, pc: false },
+          },
+        }}
+      />
     </div>
     <div style={{ marginBottom: '60px' }}>
-      <Category isFavorableOffer text="Специальные предложения" />
+      <Category card={{ name: 'favorable' }} name="Специальные предложения" />
     </div>
   </>
 );

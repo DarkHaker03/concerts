@@ -1,15 +1,16 @@
 import { Category } from 'entities/category';
 import { Information } from './information';
 import { Slider } from './slider';
+import styles from './styles.module.scss';
 
 const Event = () => (
   <>
-    <div style={{ display: 'flex' }}>
+    <div className={styles.container}>
       <Slider />
       <Information />
     </div>
     <div style={{ marginTop: '35px' }}>
-      <Category text="Похожие события" />
+      <Category card={{ name: 'favorable' }} name="Похожие события" />
     </div>
   </>
 );

@@ -1,18 +1,10 @@
 import selectedIcon from 'shared/assets/img/select.svg';
-import closeIcon from 'shared/assets/img/close.svg';
+import { PopupLayout } from 'shared/ui/popup-layout';
 import styles from './styles.module.scss';
 
 const Filter = () => (
-  <div>
-    <div role="none" onClick={() => 1} className={styles.background} />
+  <PopupLayout>
     <div className={styles.container}>
-      <img
-        src={closeIcon}
-        alt=""
-        className={styles.closeIcon}
-        onClick={() => 1}
-        role="none"
-      />
       <div style={{ padding: '20px 55px 20px 20px ' }}>
         <h3 className={styles.h3}>Фильтр</h3>
         <ul>
@@ -35,7 +27,7 @@ const Filter = () => (
       <div className={styles.resetSettings}>Сбросить настройки</div>
       <button type="button">Применить</button>
     </div>
-  </div>
+  </PopupLayout>
 );
 
 export { Filter };

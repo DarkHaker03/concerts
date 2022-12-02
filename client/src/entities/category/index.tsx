@@ -1,39 +1,50 @@
 import clsx from 'clsx';
 import { icons } from 'shared/ui/icons';
-import { EventCard } from 'entities/event-card';
+import {
+  EventCard,
+  Props as EventCardConfiguration,
+} from 'entities/event-card';
 import { FavorableOfferCard } from 'pages/home/ui/favorable-offer-card';
 import styles from './styles.module.scss';
 
+type CardType =
+  | {
+      name: 'event';
+      configuration?: Omit<EventCardConfiguration, 'mobileVertical'>;
+    }
+  | {
+      name: 'favorable';
+    };
+
 type Props = {
-  isFavorableOffer?: boolean;
-  text?: string;
+  name?: string;
   mobileVertical?: boolean;
-  infoOnImg?: boolean;
+  card: CardType;
 };
 
-const Category = ({
-  isFavorableOffer,
-  text,
-  mobileVertical,
-  infoOnImg,
-}: Props) => (
+const Category = ({ name, mobileVertical, card }: Props) => (
   <div style={{ maxWidth: '100%' }}>
-    {text && (
+    {name && (
       <div className={styles.name}>
-        <span>{text}</span>
+        <span>{name}</span>
         <icons.ArrowRight />
       </div>
     )}
     <div
       className={clsx(styles.carousel, mobileVertical && styles.mobileVertical)}
     >
-      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 1, 1].map(() =>
-        !isFavorableOffer ? (
-          <EventCard mobileVertical={mobileVertical} infoOnImg={infoOnImg} />
-        ) : (
-          <FavorableOfferCard />
-        )
-      )}
+      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 1, 1].map(() => {
+        if (card.name === 'event') {
+          return (
+            <EventCard
+              // eslint-disable-next-line
+              {...card.configuration}
+              mobileVertical={mobileVertical}
+            />
+          );
+        }
+        return <FavorableOfferCard />;
+      })}
     </div>
   </div>
 );

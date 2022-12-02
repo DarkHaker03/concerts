@@ -43,6 +43,11 @@
   font-size: 24px;
   font-weight: 600;
 }
+.logo {
+  min-width: 98px;
+  width: 98px;
+  height: 14px;
+}
 @media (max-width: 1000px) {
   .typesConcertsContainer {
     display: none;
@@ -60,5 +65,10 @@
   }
   .inputAndBellContainer {
     width: auto;
+  }
+  .logo {
+    min-width: 90px;
+    width: 90px;
+    height: 13px;
   }
 }

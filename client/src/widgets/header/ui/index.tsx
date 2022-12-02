@@ -3,44 +3,55 @@ import { icons } from 'shared/ui/icons';
 import styles from './styles.module.scss';
 
 type Props = {
-  onlyPageName?: boolean;
+  logo?: boolean;
+  pageName?: boolean;
+  typeOfConcert?: boolean;
+  searchInput?: boolean;
+  notification?: boolean;
 };
 
-const Header = ({ onlyPageName }: Props) => {
-  const [search, setSearch] = useState('');
+const Header = ({
+  logo = false,
+  pageName = false,
+  typeOfConcert = false,
+  searchInput = false,
+  notification = false,
+}: Props) => {
+  const [value, setValue] = useState('');
   return (
     <header className={styles.header}>
-      <icons.Logo height="14px" width="94px" />
-      <div className={styles.whereUser}>События</div>
-      {!onlyPageName && (
-        <>
-          <div className={styles.typesConcertsContainer}>
-            <div className={styles.active}>Музыка</div>
-            <div>Stand-up</div>
-            <div>Театр</div>
-          </div>
-          <div className={styles.inputAndBellContainer}>
-            <div className={styles.inputContainer}>
-              <input
-                type="text"
-                placeholder="Поиск билетов"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-              />
-              <icons.Search
-                inlineStyles={{
-                  position: 'absolute',
-                  right: '20px',
-                  top: 'calc(50% - 11px)',
-                }}
-              />
-            </div>
-            <icons.Bell />
-          </div>
-        </>
+      {logo && <icons.Logo inlineClass={styles.logo} />}
+      {pageName && <div className={styles.whereUser}>События</div>}
+      {typeOfConcert && (
+        <div className={styles.typesConcertsContainer}>
+          <div className={styles.active}>Музыка</div>
+          <div>Stand-up</div>
+          <div>Театр</div>
+        </div>
       )}
+      <div className={searchInput ? styles.inputAndBellContainer : ''}>
+        {searchInput && (
+          <div className={styles.inputContainer}>
+            <input
+              type="text"
+              placeholder="Поиск билетов"
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+            />
+            <icons.Search
+              inlineStyles={{
+                position: 'absolute',
+                right: '20px',
+                top: 'calc(50% - 11px)',
+              }}
+            />
+          </div>
+        )}
+        {notification && <icons.Bell />}
+      </div>
     </header>
   );
 };
 
 export { Header };
+export type { Props };

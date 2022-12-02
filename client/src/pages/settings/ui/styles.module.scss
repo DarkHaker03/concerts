@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+.img {
+  width: 161px;
+  height: 161px;
+  border-radius: 100%;
+  margin-bottom: 20px;
+}
+.name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.email {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6d6d6d;
+  margin-bottom: 50px;
+}
+.block {
+  display: flex;
+  font-size: 18px;
+  line-height: 18px;
+  width: 100%;
+}

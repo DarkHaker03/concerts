@@ -5,6 +5,16 @@
   overflow-y: scroll;
 }
 
+.container::-webkit-scrollbar {
+  width: 1px; /* ширина scrollbar */
+}
+.container::-webkit-scrollbar-track {
+  background: black; /* цвет дорожки */
+}
+.container::-webkit-scrollbar-thumb {
+  background-color: #fff; /* цвет плашки */
+}
+
 .type {
   color: #6d6d6d;
   font-size: 14px;
@@ -32,4 +42,16 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 100%;
+    max-width: none;
+    max-height: none;
+    margin-left: 0;
+  }
+  .button {
+    margin-bottom: 20px;
+  }
 }

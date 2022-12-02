@@ -6,20 +6,29 @@ import styles from './styles.module.scss';
 
 type Props = {
   mobileVertical?: boolean;
-  infoOnImg?: boolean;
+  infoOnImg?: { pc: boolean; mobile: boolean };
+  type?: 'short' | 'long';
 };
 
-const EventCard = ({ mobileVertical, infoOnImg }: Props) => {
+const EventCard = ({ mobileVertical, infoOnImg, type = 'short' }: Props) => {
   const [isSelect, setIsSelected] = useState(false);
   return (
     <div
       className={clsx(
         styles.container,
-        mobileVertical && styles.mobileVertical
+        mobileVertical && styles.mobileVertical,
+        type === 'short' && styles.short,
+        type === 'long' && styles.long
       )}
     >
-      <img className={styles.img} src={img} alt="" />
-      <div className={clsx(styles.information, infoOnImg && styles.infoOnImg)}>
+      <img className={clsx(styles.img)} src={img} alt="" />
+      <div
+        className={clsx(
+          styles.information,
+          infoOnImg?.mobile && styles.infoOnImgMobile,
+          infoOnImg?.pc && styles.infoOnImgPc
+        )}
+      >
         <div className={styles.date}>
           15 <br /> <span> окт</span>
         </div>
@@ -40,3 +49,4 @@ const EventCard = ({ mobileVertical, infoOnImg }: Props) => {
 };
 
 export { EventCard };
+export type { Props };

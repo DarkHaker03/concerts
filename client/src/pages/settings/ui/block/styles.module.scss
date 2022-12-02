@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  font-size: 18px;
+  line-height: 18px;
+  width: 100%;
+}
+.textIconContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-end;
+}

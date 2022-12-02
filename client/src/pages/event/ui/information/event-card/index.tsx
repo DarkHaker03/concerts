@@ -1,42 +1,27 @@
-import { icons } from 'shared/ui/icons';
+import CSS from 'csstype';
 import styles from './styles.module.scss';
 
-const EventCard = () => (
-  <>
-    <div style={{ marginBottom: '12px' }}>
-      <icons.Calendar />
-      <span className={styles.calendar}>Sunday, 14 February 2021</span>
+type Props = { inlineStyles?: CSS.Properties };
+
+const EventCard = ({ inlineStyles }: Props) => (
+  <div className={styles.container} style={inlineStyles}>
+    <div className={styles.date}>
+      <div style={{ fontSize: '27px', fontWeight: 600 }}>19</div>
+      апр
+      <br />
+      2023
     </div>
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        marginBottom: '27px',
-      }}
-    >
-      <span>
-        <icons.Place />
-        <span className={styles.place}>Lotte Concert Hall, Seoul</span>
-      </span>
-      <span
-        style={{
-          display: 'flex',
-          alignItems: 'flex-end',
-        }}
-      >
-        <span
-          style={{
-            fontSize: '16px',
-            lineHeight: '16px',
-            marginRight: '5px',
-          }}
-        >
-          На карте
-        </span>
-        <icons.ArrowRight />
-      </span>
+    <div>
+      <div style={{ fontSize: '18px', fontWeight: 400 }}>СР 20:00</div>
+      <div style={{ fontSize: '15px', color: '#6D6D6D', marginBottom: '10px' }}>
+        Lotte Concert Hall
+      </div>
+      <button className={styles.button} type="button">
+        Билеты от 35000 р
+      </button>
     </div>
-  </>
+    <div className={styles.city}>Seoul</div>
+  </div>
 );
 
 export { EventCard };

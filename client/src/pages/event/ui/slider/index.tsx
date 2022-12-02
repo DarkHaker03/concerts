@@ -46,6 +46,12 @@ const Slider = () => {
           <icons.ArrowRight />
         </button>
       </div>
+      <button type="button" className={styles.back}>
+        <icons.ArrowLeft />
+      </button>
+      <button type="button" className={styles.share}>
+        <icons.Share />
+      </button>
     </div>
   );
 };

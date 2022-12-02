@@ -66,7 +66,7 @@ const MiniFilter = () => (
         </div>
       </>
     ) : (
-      <Category />
+      <Category card={{ name: 'event' }} />
     )}
   </div>
 );
