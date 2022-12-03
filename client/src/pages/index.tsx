@@ -9,7 +9,7 @@ import { Event } from './event/ui';
 import { Favourites } from './favourites/ui';
 import { Settings } from './settings/ui';
 import { Default } from './settings/ui/default';
-import { PersonalData } from './settings/personal-data';
+import { Profile } from './settings/profile';
 import { Help } from './settings/help';
 import { Tickets } from './tickets';
 
@@ -77,7 +77,7 @@ const router = createBrowserRouter([
   {
     path: '/settings',
     element: (
-      <AppLayout headerConfiguration={{ logo: true }}>
+      <AppLayout headerConfiguration={{ logo: true, notification: true }}>
         <Settings />
       </AppLayout>
     ),
@@ -87,8 +87,8 @@ const router = createBrowserRouter([
         element: <Default />,
       },
       {
-        path: 'personaldata',
-        element: <PersonalData />,
+        path: 'profile',
+        element: <Profile />,
       },
       {
         path: 'help',

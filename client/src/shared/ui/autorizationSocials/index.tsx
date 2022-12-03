@@ -1,12 +1,8 @@
 import { icons } from '../icons';
+import styles from './styles.module.scss';
 
 const AutorizationSocials = () => (
-  <div
-    style={{
-      display: 'flex',
-      justifyContent: 'center',
-    }}
-  >
+  <div className={styles.container}>
     <a
       href="http://localhost:3000/registration"
       style={{ marginRight: '96px' }}

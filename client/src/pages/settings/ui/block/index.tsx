@@ -6,10 +6,16 @@ type Props = {
   text: string;
   icon: JSX.Element;
   inlineStyles?: CSS.Properties;
+  onClick?: () => void;
 };
 
-const Block = ({ text, icon, inlineStyles }: Props) => (
-  <div className={styles.container} style={inlineStyles}>
+const Block = ({ text, icon, inlineStyles, onClick }: Props) => (
+  <button
+    type="button"
+    onClick={onClick}
+    className={styles.container}
+    style={inlineStyles}
+  >
     <div style={{ width: '36px', display: 'flex', alignItems: 'flex-end' }}>
       {icon}
     </div>
@@ -17,7 +23,7 @@ const Block = ({ text, icon, inlineStyles }: Props) => (
       <span>{text}</span>
       <icons.ArrowRight />
     </div>
-  </div>
+  </button>
 );
 
 export { Block };

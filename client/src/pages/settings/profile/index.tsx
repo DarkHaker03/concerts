@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Field } from 'shared/ui/field';
 import { icons } from 'shared/ui/icons';
 
-const PersonalData = () => {
+const Profile = () => {
   const [email, setEmail] = useState('');
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
@@ -30,4 +30,4 @@ const PersonalData = () => {
     </>
   );
 };
-export { PersonalData };
+export { Profile };
