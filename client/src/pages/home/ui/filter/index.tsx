@@ -3,7 +3,7 @@ import { PopupLayout } from 'shared/ui/popup-layout';
 import styles from './styles.module.scss';
 
 const Filter = () => (
-  <PopupLayout>
+  <PopupLayout close={() => 1}>
     <div className={styles.container}>
       <div style={{ padding: '20px 55px 20px 20px ' }}>
         <h3 className={styles.h3}>Фильтр</h3>

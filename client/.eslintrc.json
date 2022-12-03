@@ -20,6 +20,7 @@
   },
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
+    "no-param-reassign": "off",
     "jsx-a11y/anchor-is-valid": [
       "error",
       {

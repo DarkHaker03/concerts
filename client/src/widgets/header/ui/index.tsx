@@ -1,4 +1,6 @@
+import { appSlice } from 'app/model';
 import { useState } from 'react';
+import { useAppDispatch, useAppSelector } from 'shared/hooks/redux';
 import { icons } from 'shared/ui/icons';
 import styles from './styles.module.scss';
 
@@ -17,6 +19,8 @@ const Header = ({
   searchInput = false,
   notification = false,
 }: Props) => {
+  const dispatch = useAppDispatch();
+  const { toggle } = appSlice.actions;
   const [value, setValue] = useState('');
   return (
     <header className={styles.header}>
@@ -47,7 +51,11 @@ const Header = ({
             />
           </div>
         )}
-        {notification && <icons.Bell />}
+        {notification && (
+          <button type="button" onClick={() => dispatch(toggle())}>
+            <icons.Bell />
+          </button>
+        )}
       </div>
     </header>
   );

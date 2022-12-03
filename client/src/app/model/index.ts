@@ -1,15 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 interface State {
-  a: number;
+  isNotificationPopup: boolean;
 }
 
-const initialState: State = { a: 0 };
+const initialState: State = { isNotificationPopup: false };
 
 export const appSlice = createSlice({
   name: 'app',
   initialState,
-  reducers: {},
+  reducers: {
+    toggle(state) {
+      state.isNotificationPopup = !state.isNotificationPopup;
+    },
+  },
 });
 
 export default appSlice.reducer;

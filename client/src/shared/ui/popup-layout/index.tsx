@@ -3,17 +3,18 @@ import styles from './styles.module.scss';
 
 type Props = {
   children: JSX.Element;
+  close: () => void;
 };
 
-const PopupLayout = ({ children }: Props) => (
+const PopupLayout = ({ children, close }: Props) => (
   <div>
-    <div role="none" onClick={() => 1} className={styles.background} />
+    <div role="none" onClick={close} className={styles.background} />
     <div className={styles.container}>
       <img
         src={closeIcon}
         alt=""
         className={styles.closeIcon}
-        onClick={() => 1}
+        onClick={close}
         role="none"
       />
       {children}
