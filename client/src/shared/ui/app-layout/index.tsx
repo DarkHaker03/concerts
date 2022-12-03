@@ -1,6 +1,6 @@
 import { Sidebar } from 'widgets/sidebar/ui';
 import { Header, Props as HeaderConfiguration } from 'widgets/header/ui';
-import { Notifications } from 'entities/notifications';
+// import { Notifications } from 'entities/notifications';
 import styles from './styles.module.scss';
 
 type Props = {
@@ -16,7 +16,7 @@ const AppLayout = ({ children, headerConfiguration }: Props) => (
       <Sidebar />
       <main className={styles.main}>{children}</main>
     </div>
-    <Notifications />
+    {/* <Notifications /> */}
   </div>
 );
 

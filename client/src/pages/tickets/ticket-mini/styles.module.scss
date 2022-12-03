@@ -1,0 +1,108 @@
+.container {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #fff;
+  width: 100%;
+  color: #000;
+  overflow: hidden;
+}
+.img {
+  width: 59px;
+  height: 59px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+.blackCircle {
+  background-color: #000;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -15px;
+}
+.category {
+  font-size: 12px;
+  font-weight: 400;
+  color: #7d7d7d;
+}
+.text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+.type {
+  color: #7d7d7d;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.price {
+  color: #000;
+  font-weight: 600;
+  font-size: 14px;
+}
+.place {
+  font-size: 12px;
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  font-weight: 300;
+  color: #7d7d7d;
+  span {
+    margin-left: 5px;
+  }
+}
+@media (max-width: 360px) {
+  .container {
+    padding: 10px;
+  }
+  .img {
+    width: 50px;
+    height: 50px;
+  }
+  .name {
+    font-size: 14px;
+  }
+  .type {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+  .place {
+    font-size: 10px;
+    span {
+      margin-left: 2px;
+    }
+  }
+  .price {
+    font-size: 12px;
+  }
+}
+@media (max-width: 300px) {
+  .container {
+    padding: 5px;
+  }
+  .img {
+    width: 45px;
+    height: 45px;
+    margin-right: 5px;
+  }
+  .name {
+    font-size: 13px;
+  }
+  .type {
+    font-size: 9px;
+    margin-bottom: 2px;
+  }
+  .place {
+    font-size: 9px;
+  }
+  .price {
+    font-size: 11px;
+  }
+}

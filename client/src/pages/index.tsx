@@ -11,6 +11,7 @@ import { Settings } from './settings/ui';
 import { Default } from './settings/ui/default';
 import { PersonalData } from './settings/personal-data';
 import { Help } from './settings/help';
+import { Tickets } from './tickets';
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,14 @@ const router = createBrowserRouter([
     element: (
       <AppLayout headerConfiguration={{ logo: true, notification: true }}>
         <Favourites />
+      </AppLayout>
+    ),
+  },
+  {
+    path: '/tickets',
+    element: (
+      <AppLayout headerConfiguration={{ logo: true, notification: true }}>
+        <Tickets />
       </AppLayout>
     ),
   },
