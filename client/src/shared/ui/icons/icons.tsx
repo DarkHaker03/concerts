@@ -218,7 +218,11 @@ const ArrowRight = ({
   height = '13',
   inlineStyles,
   inlineClass,
-}: Pick<Props, 'width' | 'height' | 'inlineStyles' | 'inlineClass'>) => (
+  fill,
+}: Pick<
+  Props,
+  'width' | 'height' | 'inlineStyles' | 'inlineClass' | 'fill'
+>) => (
   <svg
     width={width}
     height={height}
@@ -230,7 +234,7 @@ const ArrowRight = ({
   >
     <path
       d="M1.22306 1.50108C0.879669 1.15768 0.879669 0.600936 1.22306 0.257544C1.56645 -0.085848 2.1232 -0.085848 2.46659 0.257544L7.74246 5.53341C8.08585 5.8768 8.08585 6.43355 7.74246 6.77694L2.46659 12.0528C2.1232 12.3962 1.56645 12.3962 1.22306 12.0528C0.879669 11.7094 0.879669 11.1527 1.22306 10.8093L5.87716 6.15517L1.22306 1.50108Z"
-      fill="white"
+      fill={fill}
     />
   </svg>
 );
@@ -696,6 +700,61 @@ const PlaceBlack = ({
   </svg>
 );
 
+const Percent = ({
+  width = '36',
+  height = '24',
+  inlineStyles,
+  inlineClass,
+}: Pick<Props, 'width' | 'height' | 'inlineStyles' | 'inlineClass'>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={width}
+    height={height}
+    fill="none"
+    style={inlineStyles}
+    className={inlineClass}
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M0 5.4c0-2.25 0-3.375.573-4.163a3 3 0 0 1 .664-.664C2.025 0 3.15 0 5.4 0h25.2c2.25 0 3.375 0 4.163.573.255.185.479.409.664.664C36 2.025 36 3.15 36 5.4V8a4 4 0 0 0 0 8v2.6c0 2.25 0 3.375-.573 4.163-.185.255-.409.479-.664.664C33.975 24 32.85 24 30.6 24H5.4c-2.25 0-3.375 0-4.163-.573a3.003 3.003 0 0 1-.664-.664C0 21.975 0 20.85 0 18.6V16a4 4 0 0 0 0-8V5.4Z"
+      fill="#000"
+      fillOpacity=".07"
+    />
+    <path
+      d="m12.396 19.06 9.06-14.44h2.16l-9.06 14.44h-2.16Zm4.04-10.78c0 1.187-.267 2.1-.8 2.74-.52.64-1.233.96-2.14.96s-1.627-.3-2.16-.9c-.533-.613-.8-1.52-.8-2.72 0-1.213.267-2.133.8-2.76.534-.64 1.253-.96 2.16-.96.907 0 1.62.307 2.14.92.534.6.8 1.507.8 2.72Zm-3.82.04c0 .747.074 1.273.22 1.58.147.293.367.44.66.44.293 0 .513-.147.66-.44.147-.307.22-.833.22-1.58 0-.76-.073-1.287-.22-1.58-.133-.293-.353-.44-.66-.44-.306 0-.533.147-.68.44-.133.293-.2.82-.2 1.58Zm12.84 7.08c0 1.187-.267 2.1-.8 2.74-.52.64-1.233.96-2.14.96-.893 0-1.613-.307-2.16-.92-.533-.613-.8-1.513-.8-2.7 0-1.213.267-2.133.8-2.76.547-.64 1.267-.96 2.16-.96.907 0 1.62.307 2.14.92.534.6.8 1.507.8 2.72Zm-3.82.04c0 .747.073 1.267.22 1.56.16.293.38.44.66.44.307 0 .534-.147.68-.44.147-.293.22-.813.22-1.56 0-.747-.073-1.267-.22-1.56-.147-.307-.373-.46-.68-.46-.293 0-.513.153-.66.46-.147.293-.22.813-.22 1.56Z"
+      fill="#000"
+      fillOpacity=".3"
+    />
+  </svg>
+);
+
+const VerticalPoints = ({
+  width = '3',
+  height = '13',
+  inlineStyles,
+  inlineClass,
+  fill = '#000',
+}: Pick<
+  Props,
+  'width' | 'height' | 'inlineStyles' | 'inlineClass' | 'fill'
+>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={width}
+    height={height}
+    viewBox="0 0 3 13"
+    style={inlineStyles}
+    className={inlineClass}
+  >
+    <path
+      d="M1.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+      fill={fill}
+      fillRule="evenodd"
+    />
+  </svg>
+);
+
 const IconWithText = ({ icon, text }: Pick<Props, 'icon' | 'text'>) => (
   <div className={styles.iconWithText}>
     {icon}
@@ -730,4 +789,6 @@ export {
   PaymentCard,
   Planet,
   PlaceBlack,
+  Percent,
+  VerticalPoints,
 };

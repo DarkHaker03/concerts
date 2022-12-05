@@ -11,7 +11,8 @@ import { Settings } from './settings/ui';
 import { Default } from './settings/ui/default';
 import { Profile } from './settings/profile';
 import { Help } from './settings/help';
-import { Tickets } from './tickets';
+import { Tickets } from './tickets/ui';
+import { BuyTicket } from './buy-ticket/ui';
 
 const router = createBrowserRouter([
   {
@@ -71,6 +72,14 @@ const router = createBrowserRouter([
     element: (
       <AppLayout headerConfiguration={{ logo: true, notification: true }}>
         <Tickets />
+      </AppLayout>
+    ),
+  },
+  {
+    path: '/buyticket',
+    element: (
+      <AppLayout headerConfiguration={{ logo: true, notification: true }}>
+        <BuyTicket />
       </AppLayout>
     ),
   },

@@ -1,0 +1,63 @@
+.button {
+  min-height: 48px;
+  padding: 0 35px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000cc;
+  display: flex;
+  align-items: center;
+  background-color: #67d89e;
+  border-radius: 100px;
+  justify-content: space-between;
+}
+.name {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+.ticket {
+  padding: 10px 10px;
+}
+.place {
+  color: rgb(133, 133, 133);
+  font-size: 12px;
+}
+.paymentMethod {
+  border-radius: 8px;
+  color: #000;
+  height: 92px;
+  width: 128px;
+  padding: 10px 16px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.paymentMethod:hover {
+  border: solid 2px #67d89e;
+}
+.selectedPaymentMethod {
+  border: solid 2px #67d89e;
+}
+.input {
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+  border: solid 1px #000;
+  margin: 10px 0;
+}
+.ticketsContainer {
+  color: rgb(51, 51, 51);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 15px 9px;
+  position: relative;
+  margin: 10px 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.ticketsContainer__button {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}

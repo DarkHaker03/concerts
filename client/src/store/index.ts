@@ -1,8 +1,10 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import appReducer from 'app/model';
+import buyTicketReducer from 'pages/buy-ticket/model';
 
 const rootReducer = combineReducers({
   appReducer,
+  buyTicketReducer,
 });
 
 export const setupStore = () =>
