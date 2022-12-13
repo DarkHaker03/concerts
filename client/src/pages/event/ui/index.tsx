@@ -1,4 +1,5 @@
 import { Category } from 'entities/category';
+import { icons } from 'shared/ui/icons';
 import { Information } from './information';
 import { Slider } from './slider';
 import styles from './styles.module.scss';

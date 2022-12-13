@@ -218,7 +218,7 @@ const ArrowRight = ({
   height = '13',
   inlineStyles,
   inlineClass,
-  fill,
+  fill = '#fff',
 }: Pick<
   Props,
   'width' | 'height' | 'inlineStyles' | 'inlineClass' | 'fill'
