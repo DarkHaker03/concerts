@@ -1,15 +1,23 @@
 {
   "files": {
-    "main.css": "/concerts/static/css/main.a449eb8d.css",
-    "main.js": "/concerts/static/js/main.a5ade12a.js",
+    "main.css": "/concerts/static/css/main.5fb3cdf6.css",
+    "main.js": "/concerts/static/js/main.6b3d5e4a.js",
     "static/js/787.c4e7f8f9.chunk.js": "/concerts/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/consert-img.jpg": "/concerts/static/media/consert-img.b06cca39b559c9278b5f.jpg",
+    "static/media/slide-img-2.jpg": "/concerts/static/media/slide-img-2.a9e09483f2fa98dc60b3.jpg",
+    "static/media/slide-img-3.jpg": "/concerts/static/media/slide-img-3.1fc3a7e85cd6c3091cee.jpg",
+    "static/media/slide-img.jpg": "/concerts/static/media/slide-img.55188bb2c59895153b49.jpg",
+    "static/media/img2.jpg": "/concerts/static/media/img2.2bd1edc6c616b0f97705.jpg",
+    "static/media/img--2.jpg": "/concerts/static/media/img--2.8675029325f28b0c72b0.jpg",
+    "static/media/img.jpg": "/concerts/static/media/img.63864562fbee2815ae1d.jpg",
+    "static/media/close.svg": "/concerts/static/media/close.d48347f82031218d926bb3eacbb82b21.svg",
     "index.html": "/concerts/index.html",
-    "main.a449eb8d.css.map": "/concerts/static/css/main.a449eb8d.css.map",
-    "main.a5ade12a.js.map": "/concerts/static/js/main.a5ade12a.js.map",
+    "main.5fb3cdf6.css.map": "/concerts/static/css/main.5fb3cdf6.css.map",
+    "main.6b3d5e4a.js.map": "/concerts/static/js/main.6b3d5e4a.js.map",
     "787.c4e7f8f9.chunk.js.map": "/concerts/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a449eb8d.css",
-    "static/js/main.a5ade12a.js"
+    "static/css/main.5fb3cdf6.css",
+    "static/js/main.6b3d5e4a.js"
   ]
 }
