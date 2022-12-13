@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import App from 'app/ui';
 import { setupStore } from 'store';
 import reportWebVitals from 'reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,10 +13,15 @@ const root = ReactDOM.createRoot(
 
 const store = setupStore();
 
+const BASE_NAME =
+  process.env.NODE_ENV === 'production' ? process.env.REACT_APP_GITHUB_URL : '';
+
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <BrowserRouter basename={BASE_NAME}>
+        <App />
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );

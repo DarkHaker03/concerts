@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { useRoutes } from 'react-router-dom';
 import { LayoutForRegistrationAndregistration } from 'shared/ui/layout-for-autorization-and-registration';
 import { AppLayout } from 'shared/ui/app-layout';
 import { Autorization } from './autorization/ui';
@@ -14,7 +14,7 @@ import { Help } from './settings/help';
 import { Tickets } from './tickets/ui';
 import { BuyTicket } from './buy-ticket/ui';
 
-const router = createBrowserRouter([
+const router = [
   {
     element: <LayoutForRegistrationAndregistration />,
     children: [
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: '/welcome',
+    path: '/',
     element: <Welcome />,
   },
   {
@@ -105,8 +105,11 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+];
 
-const Pages = () => <RouterProvider router={router} />;
+const Pages = () => {
+  const pages = useRoutes(router);
+  return pages;
+};
 
 export default Pages;
