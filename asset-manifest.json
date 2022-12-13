@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/concerts/static/css/main.5fb3cdf6.css",
-    "main.js": "/concerts/static/js/main.2b32dddb.js",
+    "main.js": "/concerts/static/js/main.1261fbff.js",
     "static/js/787.c4e7f8f9.chunk.js": "/concerts/static/js/787.c4e7f8f9.chunk.js",
     "static/media/consert-img.jpg": "/concerts/static/media/consert-img.b06cca39b559c9278b5f.jpg",
     "static/media/slide-img-2.jpg": "/concerts/static/media/slide-img-2.a9e09483f2fa98dc60b3.jpg",
@@ -13,11 +13,11 @@
     "static/media/close.svg": "/concerts/static/media/close.d48347f82031218d926bb3eacbb82b21.svg",
     "index.html": "/concerts/index.html",
     "main.5fb3cdf6.css.map": "/concerts/static/css/main.5fb3cdf6.css.map",
-    "main.2b32dddb.js.map": "/concerts/static/js/main.2b32dddb.js.map",
+    "main.1261fbff.js.map": "/concerts/static/js/main.1261fbff.js.map",
     "787.c4e7f8f9.chunk.js.map": "/concerts/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5fb3cdf6.css",
-    "static/js/main.2b32dddb.js"
+    "static/js/main.1261fbff.js"
   ]
 }
